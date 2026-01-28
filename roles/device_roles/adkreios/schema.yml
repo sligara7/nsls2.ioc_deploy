@@ -1,0 +1,9 @@
+---
+type: enum("adkreios")
+
+environment:
+  PREFIX: str()  # Base PV prefix (e.g., "XF:23ID-ES{Det:Kreios}:")
+  PRODIGY_HOST: str()  # Prodigy server hostname or IP address
+  PRODIGY_PORT: int(min=1, max=65535, required=False)  # Prodigy server port (default: 7010)
+  XSIZE: int(min=1, required=False)  # Image X dimension in pixels (default: 1285)
+  YSIZE: int(min=1, required=False)  # Image Y dimension in pixels (default: 730)

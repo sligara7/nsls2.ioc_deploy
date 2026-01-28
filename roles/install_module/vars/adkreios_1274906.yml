@@ -1,0 +1,21 @@
+---
+
+adkreios_1274906:
+  name: ADKreios
+  url: https://github.com/sligara7/kreios-ioc
+  version: 1274906
+
+  # Standard areaDetector configuration for plugins
+  include_base_ad_config: true
+
+  # Depends on ADCore for standard areaDetector plugins
+  module_deps:
+    - adcore_60080dc
+
+  # IOC executable name (PROD_IOC in iocApp/src/Makefile)
+  executable: "kreios"
+
+  # System packages required (driver communicates via asyn TCP)
+  # epics-bundle provides base dependencies
+  pkg_deps:
+    - epics-bundle

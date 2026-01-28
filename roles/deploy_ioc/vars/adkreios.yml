@@ -1,0 +1,18 @@
+---
+
+deploy_ioc_template_root_path: "{{ deploy_ioc_required_module_path }}"
+deploy_ioc_required_module: adkreios_1274906
+deploy_ioc_use_ad_common: true
+deploy_ioc_req_file_list:
+  - name: auto_settings.req
+    macros: "P=$(PREFIX)"
+deploy_ioc_device_specific_env:
+  PORT: "KREIOS1"
+  QSIZE: 20
+  NCHANS: 100000
+  CBUFFS: 500
+  MAX_THREADS: 5
+  XSIZE: 1285
+  YSIZE: 730
+  PRODIGY_PORT: 7010
+  EPICS_DB_INCLUDE_PATH: "$(ADCORE)/db:$(ADKREIOS)/db"
