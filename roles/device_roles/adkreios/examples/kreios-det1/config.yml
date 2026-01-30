@@ -1,0 +1,10 @@
+---
+kreios-det1:
+  type: "adkreios"
+  environment:
+    PREFIX: "KREIOS:"
+    ENGINEER: "Test User"
+    PRODIGY_HOST: "localhost"
+    PRODIGY_PORT: 7010
+    XSIZE: 1285
+    YSIZE: 730

@@ -1,0 +1,29 @@
+---
+# Verification configuration for KREIOS IOC deployment
+# Skip compilation since the KREIOS module requires building from source
+skip_compilation: true
+
+# Files that should exist after deployment
+expected_files:
+  - path: "iocBoot/st.cmd"
+    contains:
+      - "errlogInit"
+      - "iocInit"
+  - path: "iocBoot/base.cmd"
+    contains:
+      - "kreiosConfig"
+      - "PRODIGY"
+      - "kreios.template"
+  - path: "iocBoot/epicsEnv.cmd"
+    contains:
+      - "PREFIX"
+      - "KREIOS:"
+  - path: "as/req/auto_settings.req"
+    contains:
+      - "commonPlugin_settings.req"
+
+# Directories that should exist
+expected_directories:
+  - "iocBoot"
+  - "as/req"
+  - "as/save"
